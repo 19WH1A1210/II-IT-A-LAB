@@ -8,3 +8,8 @@ To Display the names and roll numbers of students
 2.
 3.
 4.
+
+Output Obtained
+
+
+![Output](Screenshot(2).png)
