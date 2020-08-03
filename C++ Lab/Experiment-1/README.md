@@ -12,4 +12,4 @@ To Display the names and roll numbers of students
 Output Obtained
 
 
-![Output](Screenshot(2).png)
+![Output](image.jpg)
