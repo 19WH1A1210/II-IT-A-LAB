@@ -15,7 +15,7 @@ class StrBufDemo
 		System.out.println("Replace: " +name.replace(0,2,"hi"));
 		System.out.println("CharAt(3): " +name.charAt(3));
 		System.out.println("IndexOf(a): " +name.indexOf("a"));
-		System.out.println("LastIndexOf(a): : " +name.lastIndexOf("a"));
+		System.out.println("LastIndexOf(a): " +name.lastIndexOf("a"));
 		System.out.println("SubString: " +name.substring(4,7));
 		System.out.println("Reverse: " +name.reverse());
 
