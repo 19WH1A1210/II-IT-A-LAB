@@ -1,0 +1,14 @@
+create table customer(cust_id int primary key, cust_name varchar(20));
+insert into customer values(101,'Ramya'),(102,'Lilly'),(103,'Sai'),(104,'Hari');
+select * from customer;
+create table reservations(resid int primary key, cust_id int,day date, foreign key(cust_id) references customer(cust_id));
+insert into reservations values(1451, 101, '2021-07-12'),(1452, 103, '2021-06-30'),(1453,102,'2021-04-15');
+select * from reservations;
+select cust_id from customer where cust_id <> ALL(select cust_id from reservations);
+select cust_id from customer where cust_id = ANY(select cust_id from reservations);
+select cust_id from customer where cust_id = SOME(select cust_id from reservations);
+select cust_id from customer where cust_id IN (select cust_id from reservations);
+select * from customer where cust_id IN (101, 104);
+select * from customer where cust_id between 101 and 103;
+select cust_id from customer where cust_id < 102 union select cust_id from reservations where day = '2021-06-30';
+select cust_id from customer where cust_id < 103 and cust_id in (select cust_id from reservations where day = '2021-07-12');
