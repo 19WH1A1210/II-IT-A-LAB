@@ -1,0 +1,18 @@
+create table bus(busno int primary key,fromplace varchar(20),toplace varchar(20));
+insert into bus values(201,'HYD','BGLR'),(202,'PUNE','CHN'),(203,'BGLR','MUM');
+alter table bus add driver_name varchar(15);
+select * from bus;
+create table ticket(tickid int primary key,tickdate Date,price real,deptime varchar(10),arrivaltime varchar(20),source varchar(20),destination varchar(20));
+insert into ticket values(1101,'2021-06-22',170,'2.00pm','12.30am','HYD','BLGR');
+insert into ticket values(1121,'2021-06-23',170,'2.00pm','5.30pm','WAR','CHN');
+insert into ticket values(1134,'2021-06-23',170,'4.00am','11.30am','BGLR','MUM');
+update ticket set destination = 'HYD' where tickid = '1121'; 
+select * from ticket;
+create table passenger(pno int,pname varchar(30),gender varchar(3),age int, seatno int);
+insert into passenger values(1201,'Aruna','F',30,5);
+insert into passenger values(1202,'Bhavya','F',42,3);
+insert into passenger values(1203,'Geetha','F',35,2);
+update passenger set pname = 'Bhanu' where pno = '1202';
+alter table passenger drop seatno;
+delete from passenger where pno = 1201;
+select * from passenger;
