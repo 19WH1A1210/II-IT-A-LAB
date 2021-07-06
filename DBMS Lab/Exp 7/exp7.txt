@@ -1,0 +1,14 @@
+create table Student(htnum int primary key, name varchar(100), cgpa real, busnum int);
+insert into Student values(1, 'Raajitha', 9.5,1),(2, 'Priyanka', 8.5,1),(3, 'Akshitha', 9,3),(4, 'Aparna', 8.5,4),(5,'Sanjana',9,3),(6,'Sravya',9.2,2);
+select * from Student;
+select MIN(cgpa)as MINIMUM_CGPA from Student;
+select MAX(cgpa)as MAXIMUM_CGPA from Student;
+select AVG(cgpa)as AVERAGE_CGPA from Student;
+select SUM(cgpa)as SUMOF_CGPA from Student;
+select COUNT(cgpa)as COUNTOF_CGPA from Student;
+select * from Student where cgpa < (select MAX(cgpa) from Student);
+select name from Student where cgpa > (select AVG(cgpa) from Student);
+select COUNT(*) from Student where cgpa < (select AVG(cgpa) from Student);
+select busnum,count(*) as std_count_bus from Student group by busnum;
+select busnum,count(*) as numofMeritStudentsBUS from Student group by busnum having avg(cgpa)>9;
+select * from Student order by cgpa desc;
