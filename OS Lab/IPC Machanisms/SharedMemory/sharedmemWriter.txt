@@ -7,7 +7,7 @@ int main() {
        	char str = (char) shmat(shmid,(void*)0,0);   
 	printf("Write Data : "); 
 	fgets(str,50,stdin); 
-	printf("Data written in memory: %s\n",str);
+	printf("Data written in memory is : %s\n",str);
 	shmdt(str);
 	return 0;
 }
