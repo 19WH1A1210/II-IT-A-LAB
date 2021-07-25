@@ -24,7 +24,7 @@ class A extends Thread {
     		try {
         		for (int i = 0; i< 5; i++)        {
 				num = r.nextInt(100);
-				System.out.println("Main Thread and Generated Number is " 				+ num);
+				System.out.println("Main Thread and Generated Number is "+ num);
                 		if (num % 2 == 0){
                             		Thread t1 = new Thread(new Even(num));
                             		t1.start();
