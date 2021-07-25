@@ -3,7 +3,7 @@ class VowelOrConsonant
 {
    public static void main(String[ ] arg)
    {
-	boolean isVow=false;;
+	boolean isVow=false;
 	Scanner scanner=new Scanner(System.in);
 	System.out.println("Enter a character : ");
 	char ch=scanner.next().charAt(0); 
